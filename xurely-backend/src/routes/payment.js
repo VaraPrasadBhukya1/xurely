@@ -31,7 +31,7 @@ router.post('/webhook', async (req, res) => {
   res.sendStatus(200);
 
   try {
-    const { order_id } = req.body || {};
+    const order_id = req.body?.data?.order?.order_id || req.body?.order_id;
     if (!order_id) {
       console.warn('[PAYMENT WEBHOOK] Missing order_id in body:', JSON.stringify(req.body));
       return;

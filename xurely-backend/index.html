@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xurely — Automate Every Patient Touchpoint on WhatsApp</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -775,7 +777,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
     <h1>Your clinic,<br>running at<br><em>full capacity.</em></h1>
     <p class="hero-sub">Booking, payment, reminders, review routing and reactivation — all on WhatsApp. 40% fewer no-shows from day one. <em style="color:rgba(255,255,255,.65);font-style:normal;">Gets smarter with every appointment.</em></p>
     <div class="hero-btns">
-      <a href="https://wa.me/918125151075?text=Hi!%20I%20want%20to%20try%20Xurely" class="btn-wa">
+      <a href="https://wa.me/917799552227?text=Hi!%20I%20want%20to%20try%20Xurely" class="btn-wa">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12C2 13.8 2.5 15.5 3.3 17L2 22L7.2 20.7C8.7 21.5 10.3 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2Z" fill="#0D1F38"/></svg>
         Start Free Pilot
       </a>
@@ -1336,7 +1338,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
     <div class="rv-card">
       <div class="rv-card-top">
         <div class="rv-avatar">
-          <img src="https://images.unsplash.com/photo-1614608682850-e0d6ed316d47?auto=format&fit=crop&w=100&h=100&q=80&crop=faces" alt="Happy patient">
+          <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=100&h=100&q=80&crop=faces" alt="Sravani K. patient">
         </div>
         <div>
           <div class="rv-name">Sravani K.</div>
@@ -1389,8 +1391,8 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
       <div class="rl"><span>Xurely reduces no-shows by</span><strong>40%</strong></div>
       <div class="rl"><span>Revenue recovered from no-shows</span><strong>₹31,200</strong></div>
       <div class="rl"><span>Reactivation revenue (est.)</span><strong>₹8,000–15,000</strong></div>
-      <div class="rl cost"><span>Xurely Growth Plan</span><strong>− ₹9,999</strong></div>
-      <div class="rl total"><span>Net monthly gain</span><strong>₹29,000+</strong></div>
+      <div class="rl cost"><span>Xurely Growth Plan <span style="font-size:.68rem;color:rgba(245,158,11,.5);font-weight:400;">(₹10,000/yr ÷ 12)</span></span><strong>− ₹834</strong></div>
+      <div class="rl total"><span>Net monthly gain</span><strong>₹38,000+</strong></div>
     </div>
   </div>
 </div>
@@ -1518,29 +1520,53 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
 <section class="pricing-sec" id="pricing">
   <span class="sec-tag">Pricing</span>
   <h2 class="sec-h">Simple pricing.<br>No surprises.</h2>
+  <p class="sec-p" style="margin-bottom:10px;">One flat annual fee. You only recharge for WhatsApp API credits based on messages sent.</p>
+
+  <!-- Billing toggle -->
+  <div style="display:flex;align-items:center;gap:14px;margin:28px 0 36px;">
+    <span id="lbl-m" style="font-size:.84rem;font-weight:500;color:var(--muted);">Monthly</span>
+    <label style="position:relative;width:48px;height:26px;cursor:pointer;display:block;">
+      <input type="checkbox" id="billingToggle" checked style="display:none;">
+      <div id="toggle-track" style="width:100%;height:100%;background:var(--green);border-radius:100px;transition:background .2s;"></div>
+      <div id="toggle-thumb" style="position:absolute;top:3px;left:3px;width:20px;height:20px;background:white;border-radius:50%;transition:transform .25s cubic-bezier(.4,0,.2,1);box-shadow:0 1px 4px rgba(0,0,0,.18);transform:translateX(22px);"></div>
+    </label>
+    <span id="lbl-a" style="font-size:.84rem;font-weight:600;color:var(--navy);">Annual &nbsp;<span style="background:var(--gold);color:white;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:100px;">Save 17%</span></span>
+  </div>
+
+  <!-- WhatsApp credits note -->
+  <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(37,211,102,.07);border:1px solid rgba(37,211,102,.2);border-radius:10px;padding:11px 18px;margin-bottom:36px;">
+    <div style="width:8px;height:8px;background:var(--wa);border-radius:50%;flex-shrink:0;box-shadow:0 0 0 3px rgba(37,211,102,.2);"></div>
+    <span style="font-size:.8rem;color:var(--muted);font-family:var(--B);">Platform fee is fixed — you only top up <strong style="color:var(--navy);">WhatsApp API credits</strong> based on usage (est. ₹800–₹1,500/month for 30 patients/day)</span>
+  </div>
+
   <div class="pg">
+    <!-- STARTER -->
     <div class="pc">
       <div class="pn">Starter</div>
       <div class="pf">Single doctor · GP · Dental</div>
-      <div class="pa">₹4,999</div>
-      <div class="pp">/month + GST</div>
-      <ul class="pfl" style="margin-top:16px">
+      <div class="pa price-val" data-monthly="999" data-annual="4999">₹4,999</div>
+      <div class="pp price-period">/year + GST</div>
+      <div class="price-equiv" style="font-size:.76rem;color:var(--green2);font-weight:600;margin-bottom:18px;">≈ ₹417/month — billed annually</div>
+      <ul class="pfl">
         <li>1 doctor / 1 location</li>
         <li>WhatsApp booking agent</li>
-        <li>Upfront payment + 10% discount</li>
+        <li>Paywall + 10% discount</li>
         <li>Smart day-of reminders</li>
         <li>Review routing</li>
         <li>Up to 500 appointments/month</li>
       </ul>
       <a href="#contact" class="pbtn pb-o">Get Started</a>
     </div>
+
+    <!-- GROWTH -->
     <div class="pc pop">
       <div class="pop-tag">Most Popular</div>
       <div class="pn" style="color:rgba(255,255,255,.4)">Growth</div>
       <div class="pf">Diagnostic centres · Multi-specialty</div>
-      <div class="pa" style="color:white">₹9,999</div>
-      <div class="pp">/month + GST</div>
-      <ul class="pfl" style="margin-top:16px">
+      <div class="pa price-val" data-monthly="1799" data-annual="10000" style="color:white">₹10,000</div>
+      <div class="pp price-period">/year + GST</div>
+      <div class="price-equiv" style="font-size:.76rem;color:var(--green);font-weight:600;margin-bottom:18px;">≈ ₹834/month — billed annually</div>
+      <ul class="pfl" style="margin-top:0">
         <li>Up to 5 doctors / departments</li>
         <li>Full 5-step patient journey</li>
         <li>Paywall + 10% discount automation</li>
@@ -1552,32 +1578,79 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
       </ul>
       <a href="#contact" class="pbtn pb-f">Get Started</a>
     </div>
-    <div class="pc">
-      <div class="pn">Enterprise</div>
-      <div class="pf">Hospitals · Diagnostic networks</div>
-      <div class="pa">₹24,999</div>
-      <div class="pp">/month + GST</div>
-      <ul class="pfl" style="margin-top:16px">
-        <li>Unlimited doctors + locations</li>
-        <li>HIS / EHR integration</li>
-        <li>Custom payment + discount rules</li>
-        <li>Multi-location review dashboard</li>
-        <li>DPDP Act compliance + SLA</li>
-        <li>Dedicated account manager</li>
+
+    <!-- CUSTOM -->
+    <div class="pc" style="background:var(--navy);border-color:var(--navy);">
+      <div class="pn" style="color:var(--green);">Custom</div>
+      <div class="pf" style="color:rgba(255,255,255,.3);">Hospitals · Diagnostic networks · Chains</div>
+      <div class="pa" style="color:white;font-size:2rem;padding-top:4px;">Custom</div>
+      <div class="pp" style="color:rgba(255,255,255,.28);">Tailored to your scale</div>
+      <div class="price-equiv" style="font-size:.76rem;color:rgba(255,255,255,.25);margin-bottom:18px;">Our team will build a plan for you</div>
+      <ul class="pfl" style="margin-top:0">
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Up to 5 doctors / departments</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Full 5-step patient journey</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Paywall + 10% discount automation</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Intake + insurance collection</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">GMB + private review dashboard</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Live queue + delay alerts</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">90-day reactivation engine</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Revenue dashboard</li>
+        <li style="color:rgba(0,184,122,.7);border-bottom-color:rgba(255,255,255,.07);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:10px 0 4px;pointer-events:none;list-style:none;display:flex;gap:0;">
+          <span style="display:block;width:100%;padding-top:8px;border-top:1px solid rgba(255,255,255,.1);">+ Everything below</span>
+        </li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Unlimited doctors + locations</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">HIS / EHR integration</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Custom payment + discount rules</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Multi-location review dashboard</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">DPDP Act compliance + SLA</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Dedicated account manager</li>
+        <li style="color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.07);">Priority onboarding & support</li>
       </ul>
-      <a href="#contact" class="pbtn pb-o">Contact Sales</a>
+      <a href="#contact" class="pbtn" style="background:transparent;border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);font-family:var(--F);font-weight:700;font-size:.84rem;text-align:center;padding:12px;border-radius:10px;display:block;text-decoration:none;transition:all .18s;" onmouseover="this.style.background='rgba(255,255,255,.08)';this.style.borderColor='rgba(255,255,255,.4)';this.style.color='white';" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(255,255,255,.2)';this.style.color='rgba(255,255,255,.7)';">Talk to Sales</a>
     </div>
   </div>
+
+  <p style="text-align:center;font-size:.74rem;color:var(--muted);margin-top:24px;">All prices exclusive of GST · WhatsApp API credits billed separately</p>
 </section>
+
+<script>
+(function(){
+  const toggle = document.getElementById('billingToggle');
+  const thumb  = document.getElementById('toggle-thumb');
+  const lblM   = document.getElementById('lbl-m');
+  const lblA   = document.getElementById('lbl-a');
+
+  function fmt(n){ return '₹' + n.toLocaleString('en-IN'); }
+
+  toggle.addEventListener('change', function(){
+    const annual = this.checked;
+    thumb.style.transform = annual ? 'translateX(22px)' : 'translateX(0)';
+    lblM.style.cssText = annual ? 'font-size:.84rem;font-weight:500;color:var(--muted);' : 'font-size:.84rem;font-weight:600;color:var(--navy);';
+    lblA.style.cssText = annual ? 'font-size:.84rem;font-weight:600;color:var(--navy);' : 'font-size:.84rem;font-weight:500;color:var(--muted);';
+
+    document.querySelectorAll('.price-val').forEach(function(el){
+      var v = annual ? parseInt(el.dataset.annual) : parseInt(el.dataset.monthly);
+      el.textContent = fmt(v);
+    });
+    document.querySelectorAll('.price-period').forEach(function(el){
+      el.textContent = annual ? '/year + GST' : '/month + GST';
+    });
+    document.querySelectorAll('.price-equiv').forEach(function(el, i){
+      if(i === 0) el.textContent = annual ? '≈ ₹417/month — billed annually' : 'Save ₹4,011/yr on annual plan';
+      if(i === 1) el.textContent = annual ? '≈ ₹834/month — billed annually' : 'Save ₹11,588/yr on annual plan';
+    });
+  });
+})();
+</script>
 
 <!-- CTA -->
 <div class="cta-sec" id="contact">
   <div style="position:relative;z-index:1;">
     <span class="sec-tag">Get Started</span>
-    <h2 class="cta-h">Try free<br>for 30 days.</h2>
+    <h2 class="cta-h">Try free<br>for 7 days.</h2>
     <p class="cta-p">We set everything up in 3 days. You watch no-shows disappear. No credit card. Cancel anytime.</p>
     <div class="cta-btns">
-      <a href="https://wa.me/918125151075?text=Hi!%20I%20want%20to%20try%20Xurely%20free" class="btn-w">
+      <a href="https://wa.me/917799552227?text=Hi!%20I%20want%20to%20try%20Xurely%20free" class="btn-w">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12C2 13.8 2.5 15.5 3.3 17L2 22L7.2 20.7C8.7 21.5 10.3 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2Z" fill="#1E4D35"/></svg>
         WhatsApp Us Now
       </a>
@@ -1702,7 +1775,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
 <div class="art-cta">
       <h4>Try Xurely free for 30 days</h4>
       <p>We set everything up in 3 days. No credit card. No commitment.</p>
-      <a href="https://wa.me/918125151075?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
+      <a href="https://wa.me/917799552227?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
     </div>
     </div>
   </div>
@@ -1735,7 +1808,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
 <div class="art-cta">
       <h4>Try Xurely free for 30 days</h4>
       <p>We set everything up in 3 days. No credit card. No commitment.</p>
-      <a href="https://wa.me/918125151075?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
+      <a href="https://wa.me/917799552227?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
     </div>
     </div>
   </div>
@@ -1761,7 +1834,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
 <div class="art-cta">
       <h4>Try Xurely free for 30 days</h4>
       <p>We set everything up in 3 days. No credit card. No commitment.</p>
-      <a href="https://wa.me/918125151075?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
+      <a href="https://wa.me/917799552227?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
     </div>
     </div>
   </div>
@@ -1783,7 +1856,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
 <div class="art-cta">
       <h4>Try Xurely free for 30 days</h4>
       <p>We set everything up in 3 days. No credit card. No commitment.</p>
-      <a href="https://wa.me/918125151075?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
+      <a href="https://wa.me/917799552227?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
     </div>
     </div>
   </div>
@@ -1811,7 +1884,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
 <div class="art-cta">
       <h4>Try Xurely free for 30 days</h4>
       <p>We set everything up in 3 days. No credit card. No commitment.</p>
-      <a href="https://wa.me/918125151075?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
+      <a href="https://wa.me/917799552227?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
     </div>
     </div>
   </div>
@@ -1841,7 +1914,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
 <div class="art-cta">
       <h4>Try Xurely free for 30 days</h4>
       <p>We set everything up in 3 days. No credit card. No commitment.</p>
-      <a href="https://wa.me/918125151075?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
+      <a href="https://wa.me/917799552227?text=Hi!%20I%20want%20to%20try%20Xurely">📲 WhatsApp Us Now</a>
     </div>
     </div>
   </div>
@@ -1858,7 +1931,7 @@ footer p { color:rgba(255,255,255,.2); font-size:.74rem; }
   </div>
 </footer>
 
-<a href="https://wa.me/918125151075" class="wa-float">
+<a href="https://wa.me/917799552227" class="wa-float">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12C2 13.8 2.5 15.5 3.3 17L2 22L7.2 20.7C8.7 21.5 10.3 22 12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2ZM16.5 14.5C16.3 15 15.4 15.5 14.8 15.6C14.4 15.6 13.9 15.7 11.7 14.8C9.1 13.7 7.4 11 7.3 10.9C7.1 10.7 6 9.3 6 7.8C6 6.3 6.8 5.5 7.1 5.2C7.3 5 7.7 4.9 7.9 4.9C8.1 4.9 8.3 4.9 8.4 4.9C8.7 4.9 8.8 5 9 5.5C9.2 6 9.8 7.5 9.8 7.6C9.9 7.7 9.9 7.9 9.8 8C9.7 8.1 9.7 8.3 9.5 8.4C9.4 8.5 9.2 8.7 9.1 8.8C9 8.9 8.8 9.1 9 9.4C9.2 9.7 9.9 10.7 10.9 11.6C12.1 12.6 13.1 12.9 13.5 13.1C13.8 13.2 14 13.2 14.2 13C14.4 12.8 15.1 12 15.3 11.7C15.5 11.4 15.8 11.5 16 11.6C16.3 11.7 17.8 12.4 18.1 12.6C18.4 12.8 18.5 12.9 18.6 13C18.6 13.3 18.6 13.9 18.4 14.5H16.5Z" fill="white"/></svg>
 </a>
 

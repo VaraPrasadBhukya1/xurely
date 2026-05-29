@@ -4,7 +4,7 @@
 const { Patient, Appointment, Doctor, Clinic, SupportTicket } = require('../models');
 const { sendText, sendButtons, sendUrlButton } = require('./whatsapp');
 const { createOTP, verifyOTP } = require('./otp');
-const { createOrder } = require('./payment');
+const { createOrder, AMOUNT_FINAL } = require('./payment');
 const T = require('./templates');
 const clinicData = require('../../config/clinicData');
 
@@ -348,7 +348,7 @@ async function finalizeBooking(phone, session) {
 
     if (paymentLink) {
       // One combined message: slot reserved + Pay Now button.
-      await sendUrlButton(phone, T.payPrompt(doctor.name, slot.label, dateLabel), 'Pay Now ₹999', paymentLink, {
+      await sendUrlButton(phone, T.payPrompt(doctor.name, slot.label, dateLabel), `Pay Now ₹${Math.round(AMOUNT_FINAL)}`, paymentLink, {
         appointmentId: appointment._id,
         patientId:     patient._id,
         messageType:   'PAYMENT_LINK',
